@@ -22,7 +22,7 @@ const resolvers = {
             .populate('thoughts')
         },
 
-        //get a user bu username
+        //get a user by username
         user: async (parent, { username }) => {
             return User.findOne({ username })
               .select('-__v -password')
